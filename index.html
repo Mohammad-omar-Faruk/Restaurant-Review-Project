@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.css">    
+    <title>Restaurant Reviews</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1><a href="/" aria-label="Home page">Restaurant Reviews</a></h1>
+        </nav>
+    </header>
+
+    <main id="maincontent">
+        <section id="map-container">
+            <div id="map" title="Reviewed restaurants on the Google Map" role="application" aria-label="Reviewed restaurants on the Google Map"></div>
+        </section>
+        <section>
+            <div class="filter-options" aria-label="Search for a restaurant using filters">
+                <h2 role="heading" aria-level="2">Filter Results</h2>
+                <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="Search for restaurant by neighborhood">
+          <option value="all">All Neighborhoods</option>
+        </select>
+                <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="Search for restaurant by cuisine">
+          <option value="all">All Cuisines</option>
+        </select>
+            </div>
+            <ul id="restaurants-list" aria-label="List of reviewed restaurants"></ul>
+        </section>
+    </main>
+
+    <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+    <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKjFgvq_rY0fgJrnCnReTnMwo2F7aFqMs&libraries=places&callback=initMap"></script>
+    <script type="application/javascript" src="service_worker.js"></script>
+
+
+    <footer id="footer">
+        Copyright (c) 2017 <a href="/" aria-label="Home page"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
