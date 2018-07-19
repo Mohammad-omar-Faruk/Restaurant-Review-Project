@@ -2,7 +2,7 @@
 
 ## App Web Address:
 
-- https://Mohammad-omar-Faruk.github.io/Restaurant-Review-Project/
+- https://mohammad-omar-faruk.github.io/Restaurant-Review-Project/
 
 
 
